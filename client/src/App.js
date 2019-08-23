@@ -4,6 +4,10 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from "./components/Login";
 import "./styles.scss";
 
+//components
+import BubblesPage from './components/BubblePage.js'
+
+
 function App() {
   const [colorList, setColorList] = useState([]);
   return (
@@ -14,6 +18,7 @@ function App() {
           Build a PrivateRoute component that will 
           display BubblePage when you're authenticated 
         */}
+        <Route exact path="/protected" componenet={BubblesPage} />
       </div>
     </Router>
   );
